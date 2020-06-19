@@ -1,0 +1,107 @@
+==========================================================================================================================
+                                        SCREENSHOTS & TCL TOOL FOR OPENMSX "SCREENSHOOTER"
+==========================================================================================================================
+
+¿Que es esta aplicación y para que sirve?---------------------------------------------------------------------------------
+
+Hice esta aplicación para hacer capturas automatizadas de grandes volumenes de roms en openmsx ya que no existe (al menos 
+que yo sepa por supuesto) programa que tenga similar funcionalidad.
+
+Sin embargo las funcionalidades que añadí permiten emplear scripting de ficheros tcl con lo que puede ser usado para 
+otros fines a través del lenguaje TCL.
+
+No estoy afiliado en modo alguno con el equipo de Open MSX ni ellos están relacionados con la creación de esta 
+aplicación por lo que si tienes algún problema contacta con DrWh0 del foro del msx.org y no molestes a los autores de 
+OpenMSX por favor.
+
+Esta aplicación es 100% freeware, pero si consideras que merece la pena es útil te invito a que me hagas una donación
+empleando el botón correspondiente de la aplicación.
+
+Este programa se entrega "tal cual" y ni yo ni ninguna persona, organización o empresa relacionada de modo directo o no
+es responsable de los daños que pueda causar el uso o la existencia de esta aplicación, es decir:
+
+No soy responsable de que mi programa rompa tu Windows (de eso ya se encarga el mismo XD), mate a tu perro, viole a tu
+pareja, desintegre a tus vecinos, se instale una baliza extraterrestre en tu gorrito de aluminio, te echen del trabajo
+por ponerte a jugar al OpenMSX en horas lectivas, borres ficheros importantes, mi programa haya sido infectado con un 
+virus, malware o similar (aunque lo verifico todo antes de subirlo, esas situaciones van más allá de mi control), etc...
+
+EN OTRAS PALABRAS: ESTO ES UNA EXENCION DE RESPONSABILIDAD COMPLETA EN TODOS LOS CASOS POSIBLES O NO
+
+Hecho en Sevilla en agosto de 2018 por DrWh0
+
+¿Como se instala y usa este programa?-------------------------------------------------------------------------------------
+
+1.- Bajas el zip
+
+2.- Descomprime todo su contenido EN LA CARPETA DONDE TENGAS EL OPENMSX (si, todo lo que contiene el zip)
+
+3.- Creas un acceso directo al escritorio (a lo mejor en el futuro hago que lo cree solo depende de las ganas que tenga)
+
+4.- Configuras la máquina MSX predeterminada en OpenMSX para correr las roms (este programa usa tu máquina personalizada)
+          
+	* Esto es importante por tres razones:
+	
+	   + Si no predeterminas la maquina correcta y no añades BIOS se usará CBIOS que actualmente sólo soporta .ROM
+	   + Si ejecutas por defecto una maquina sin soporte de cinta o unidad de disco , los CAS,DSK y TSX no funcionarán
+	   + Si ejecutas un directorio que no funciona correctamente en una generacion los screenshots obviamente fallarán
+
+5.- Predeterminas la máquina más adecuada a tus necesidades para ejecutar el script, para ello ejecutas "openmsx.exe" y a
+    continuacion seleccionas en este orden (no abras catapult solo el ejecutable directamente):
+
+    Menú-> Hardware-> Change machine (escoges la que necesites) ->Set current machine as default
+
+    Recuerda: Debes tener las bios correspondientes a la máquina que escojas
+
+6.- Ejecutas Screenshooter
+
+7.- Las opciones estan separadas en 2 grupos, las tres primeras son las mínimas imprescindibles para funcionar, las 
+    restantes son para "tunear" lo que quieras hacer y son opcionales , pincha de arriba hacia abajo el boton 1,2 y 3
+
+     * El primer botón selecciona el directorio donde tengas ficheros ZIPs con tus juegos/programas de MSX, si le das a
+       "Cancelar" se escogerá el directorio raíz "\" de la unidad actual, y se procesará la lista de zips que tengas.
+
+     * El segundo botón genera un fichero automatizado por lotes ordenando los ficheros en orden alfabético.
+     
+     * El tercer botón ejecuta el fichero de automatización y efectuará las acciones determinadas por el tcl que crea la 
+       aplicación para su uso en OpenMSX, es automatizado una vez pinchas el botón a menos que quieras cancelar.
+
+     * El cuarto botón te permite crear si no tienes uno o modificar el fichero TCL que se ejecutará con el bloc de notas
+
+     * El quinto botón es para las donaciones (no hay cantidad fija, simplemente lo que quieras, será bienvenida)
+
+8.- La zona inferior es para las indicaciones de la ruta seleccionada en el primer botón
+
+
+Aviso de funcionamiento:
+
+* Es normal que la aplicación exiga derechos administrativos si tienes habilitado el UAC (User Account Control), la 
+  aplicación no hace "cosas raras" en el sistemas, simplemente ejecuta, escribe, modifica y abre ficheros, así como 
+  ordenes de consola (creación de una lista de roms del directorio de tus roms) así como escritura y ejecución en el 
+  directorio actual de la aplicación (ejecutar OpenMSX, modificar/crear los scripts, etc..)
+
+
+Notas legales-------------------------------------------------------------------------------------------------------------
+
+Este programa usa las siguientes dependencias:
+
+"AutoIT"
+
+Es un lenguaje freeware multipropósito de automatización para Microsoft Windows los detalles están en: 
+
+http://www.autoitscript.com
+
+"OpenMSX" 
+
+Es un emulador multiplataforma de MSX bajo licencia GNU GPLv2+ , los detalles del mismo están en: 
+
+http://www.openmsx.org
+
+
+Y REPETIMOS: 
+
+NO SOY RESPONSABLE EN MODO ALGUNO DE:
+
+DAÑOS A PROPIEDADES, SERES VIVOS O NO
+
+NO OFREZCO GARANTIA DE ABSOLUTAMENTE NADA (DAÑOS MORALES, MATERIALES, MENTALES, ESPIRITUALES, O DE CUALQUIER OTRO TIPO)
+

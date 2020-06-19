@@ -1,0 +1,5 @@
+Changelog ----------------------------------------------------------------------------------------------------------------
+
+Versión 0.8
+
+First public version in english of this software so there is nothing new to inform :)

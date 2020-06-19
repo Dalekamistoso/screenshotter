@@ -1,0 +1,112 @@
+==========================================================================================================================
+                                        SCREENSHOTS & TCL TOOL FOR OPENMSX "SCREENSHOOTER"
+==========================================================================================================================
+
+What is this software and which is its purpose?---------------------------------------------------------------------------
+
+I programmed this little tool to make automated screenshots of huge lots of roms in order to save time and effort, but 
+this little tool also is capable of processing complex tcl commands editing the automated tcl script used by it
+
+
+Previous notices----------------------------------------------------------------------------------------------------------
+
+I am not affiliated in any way with Openmsx MSX Team, and they are not relationated in any form with this software, so
+if you have something to report ask "DrWh0" user in www.msx.org forum.
+
+So please don´t bother OpenMSX team with this
+
+This software is  100% freeware, but if you consider that it worth it I would be happy if you consider any donation 
+to my paypal account using the button programmed for that purpose, thanks :)
+
+This program is presented "as is" nor me nor any person, organization or business related to me is responsible in any 
+way for damage, malfunction, disgrace, sentimental status, social life or any other thing related or not to this 
+program.
+
+In other words:
+
+This is an absolute responsability exemption of all possible cases, like being fired by playing MSX games in labour 
+hours in your work, zombie apocalypse, self destruct of your operating system and/or data losses & damages or any kind
+of interference in your software and hardware, etc...
+
+This program is free from virus adware or anykind of malware AFAIK, but some antivirus *probably* could detect the
+behaviour of this software as "suspicious"
+
+
+Programmed in Seville (Spain) by DrWh0 at stardate 22-08-2018
+
+How to use this software?-----------------------------------------------------------------------------------------------
+
+1.- Download ZIP file of the english version or spanish version depending of the language of your choice
+
+2.- Unzip its contents IN THE SAME FOLDE AS OPENMSX (yes all the zip contents)
+
+3.- Create a shorcut in your desktop if you wish (maybe in the future i will add an automated option for it)
+
+4.- Launch openmsx and configure the default MSX machine suited for the software you are going to use
+          
+    * This is important because:
+	
+     + If you don´t make a correct machine default profile and you don´t add BIOS CBIOS will be used and only supports ROM
+     + If you select a machine without tape CAS & TSX files will not work the same for disk machines or DSK will not work
+     + If you choose a directory with roms incompatible with your default machine obviously will fail 
+
+5.- To select the most suitable default machine to execute the script, execute  "openmsx.exe" (not catapult) and select:
+
+    Menu-> Hardware-> Change machine (choose your desired machine) ->Set current machine as default
+
+    Remeber: You need to have the corresponding BIOS to the machine you choose
+
+6.- Execute Screenshooter
+
+7.- Options are separated in two groups, las first 3 ones are the minimal needed to work the rest are needed to customize
+    the TCL script, or gather resources needed for it.
+    
+     In order to start making screenshots follow the procedure, from the first upper button to the third lower one:
+
+     * First button is for choosing the folder with your ZIPPED games (DSK, ROMS, etc...) if you select "Cancel" then 
+     root folder will be chosen ("\") and the software will look for zips in that folder (not in subfolders).
+
+     * Second button will generate an automation file with the roms on the folder you choose at begining.
+     
+     * The third one will execute the automation file itself with the TCL script commands.
+
+     * The fourth one will edit the TCL file or create a new one if none is found.
+
+     * The fifth button is for sending me donations :)
+
+     * The last one will open OpenMSX page in order to download the emulator, documentation, etc...
+
+8.- The lower zone is the "Information Zones" where all process executed are informed to the user
+
+
+Warning:
+
+* Is normal that this application ask for administrative permissions if you have UAC configured in default levels or high
+  ones, this is needed because the application reads folder contents, modify files and execute complex commands, so there
+  is nothing to get alarmed about it.
+
+
+Third party dependencies--------------------------------------------------------------------------------------------------
+
+This program uses the following dependencies: 
+
+"AutoIT"
+
+A multiproposit freeware programming language for Microsoft Windows: 
+
+http://www.autoitscript.com
+
+"OpenMSX" 
+
+Is a multiplatform emulator under GNU GPLv2+ license:
+
+http://www.openmsx.org
+
+
+ONCE MORE:
+
+I AM NOT RESPONSIBLE IN ANY WAY OF ANY KIND OF DAMAGE FOR EXAMPLE (AND NOT LIMITED TO):
+
+MORAL, MENTAL, PHYSICAL, PERSONS, ANIMALS, MACHINES, ETC.....
+
+I DON´T OFFER ANY WARRANTY ABOUT NOTHING, ALL IS "AS IS"

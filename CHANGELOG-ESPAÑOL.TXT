@@ -1,0 +1,129 @@
+Changelog (registro de cambios):------------------------------------------------------------------------------------------
+
+Versión 0.8
+
+Cambios desde la versión 0.7 ---------------------------------------------------------------------------------------------
+
++ Versión inglesa de la aplicación
+- Eliminada ventana de aviso del script ya que es redundante
+* Cambiado el texto e iconos de varios botones y mensajes
++ Cambiado nombre de la aplicación a "Screenshooter" para que en la versión inglesa no parezca un error gramatical
+! Corregido ambito de una declaración lo cual producía un aviso no critico al compilar 
++ Añadida verificación interna de varias instancias de la aplicación evitando que se ejecute varias veces a la vez
++ Ahora se desactivan los botones de scripting cuando el proceso automático está en marcha
++ Se añaden nuevos tipos al soporte interno de los zips para equipararse a los soportados de forma descomprimida
++ Añadidas notas adicionales en el manual
++ Soporte de ficheros descomprimidos pero solo se aplicara el tcl a los formatos soportados:
+           
+		   .DSK
+		   .CAS
+		   .ROM
+		   .MX1
+		   .MX2
+		   .TSX (si usas el binario de openmsx modificado)
+
+
+Cambios desde la versión 0.6 ---------------------------------------------------------------------------------------------
+
++ Añadidas verificaciones para evitar el uso incorrecto de la aplicación y actuar en consecuencia
++ Añadidos cuadros de dialogo para evitar errores y bloquear en lo posible el incorrecto uso de la aplicación
+* Se ha modificado el comportamiento de la "debug windows" o ventana de información para que esté minimizada por defecto
++ Se han añadido etiquetas en la zona de información para mostrar el estado de la aplicación en cada proceso seleccionado
++ Al salir ahora se cierran los procesos y temporales que pudieran quedar abiertos por algún fallo externo
++ Ahora no es necesario seleccionar la ventana de información y pulsar CTRL+C ahora también basta con cerrar la ventana
++ Incrementos varios de velocidad en el procesado de los ficheros
+! Limpiezas internas de código y minimizada la cantidad de lineas de depuración
+* Ahora la documentación se divide en 2 ficheros para mayor claridad CHANGELOG.TXT para los cambios MANUAL.TXT
+
+
+Cambios desde la versión 0.5 ---------------------------------------------------------------------------------------------
+
+* Se elimina la dependencia de SED (se reservará únicamente para la versión Linux) y ya no es necesario en el software
++ Aumento de velocidad en la creación del script
+* Se cambia el icono del programa para no usar el mismo que el del openmsx
++ Se añade botón para acceder a la web del emulador para descargarlo así como a las páginas de documentación
++ Añadido binario de 64 bits (esto sirve para incrementar la velocidad en openmsx 64 bits y S.O. de 64 bits)
+
+Cambios desde la versión 0.4 (no pública)---------------------------------------------------------------------------------
+
+* Multiples cambios estéticos tanto en ventanas, como textos así como mejoras en el interfaz de usuario:
+  Ahora existen tres bloques en el GUI:
+                     1.- Los 3 botones imprescindibles para ejecutar el tcl predeterminado (capturas cada 15 sg MSX)
+		     2.- Botones para la personalización del script TCL y para donar algo al autor de este software
+                     3.- Ventana de información de ruta
++ Limpiezas varias a nivel interno del código (era un poco guarro con muchas lineas de debug :=D)
++ Añadidos numerosas verificaciones de dependencias
++ Se eliminaran los ficheros 
++ En el punto anterior hay una excepción: el fichero de lotes no se borra para no tener que repetir el proceso tras acabar
+* Cambio en la resolución por defecto de las capturas, se harán en formato raw si eliminas -raw del tcl podrás tenerlo con
+  tus prefetencias habituales de video
++ Numerosos cambios en el código para evitar errores
++ Se han añadido múltiples cuadros de dialogo para advertir sobre errores tanto en rutas como en ficheros y scripts
++ Mejoras estéticas y de funcionamiento en la ventana de debug que se crea con el script al iniciarse
++ Mejoras en documentación y registro de cambios
+
+Cambios desde la versión 0.3 (no pública)---------------------------------------------------------------------------------
+
++ Vambios internos de funcionamiento
++ Corregidos errores que se daban en condiciones inapropiadas por mal uso del usuario
+
+Cambios desde la versión 0.2 (primera versión pública)--------------------------------------------------------------------
+
++ Versión inicial pública
++ Soporte de DSK y ROM en ficheros ZIP unicamente para evitar la ejecución en falso de ficheros extraños
++ Simplificado el interfaz para facilitar su uso
++ Añadido botón de donaciones al autor
++ Añadido dialogo de selección del directorio de roms (ya no es necesario que las roms estén en el mismo directorio)
++ Eliminado "Magic Button" para que Jose Luis no se mosquee :P
++ Creación automática en caso de no existir script TCL previo del fichero  autoscr.tcl con una configuración predefinida
++ Configuracion predefinida: 
+   Screenshots cada 15 sg de tiempo msx, modo turbo, sin sonido y los screenshots renombrados al checksum del fichero
++ Auto verificación de dependencias
++ Añadida gestión de elevación de permisos para que la herramienta funcione correctamente
++ Añadido el icono del Openmsx al programa
++ Añadido indicador de ruta seleccionada en el interfaz
++ Si se cancela la selección de directorio se usará el directorio raíz del disco donde esté openmsx+Screenshooter
++ Mejoras de rendimiento internas
++ Mejoras de presentación del scripting
++ Inserción interna dinámica de comandos al fichero de ejecución
++ Añadida limpieza de temporales al finalizar el proceso
++ Ajustes y mejoras en la presentación en varias ventanas de dialogo
+
+    
+Limitaciones posibles y/o conocidas---------------------------------------------------------------------------------------
+
+[x] Las rutas y comandos si superan el espacio de comspec del sistema no se ejecutaran correctamente por limitación
+    del propio S.O.
+
+[x] Las longuitud y profundidad de rutas están restringidas a las limitaciones de FAT y NTFS que son:
+     No más de 256 caracteres de ruta
+     No más de 8 niveles de profundidad de directorios
+     No se soportan caracteres especiales ni nombres reservados (CON, LPT, : , etc....)
+
+[x] Se aplican las limitaciones inherentes al OpenMSX (1 solo fichero por zip)
+
+[x] No se ha testeado en Windows 10, si falla cambia powershell al simbolo de sistema estándar de Windows
+
+[x] La aplicación debe ir en el mismo directorio que OpenMSX esto es así para mitigar las limitaciones del comspec y
+    no crear rutas exageradamente largas.
+
+[x] Si usas Windows 10 con PowerShell como sustituto del símbolo de sistema es posible que no se genere correctamente
+    el fichero de listado, si es tu caso (yo uso Windows 7 y Linux Mint) cambia el shell por defecto al clásico.
+
+[x] Si la máquina emulada por defecto no soporta determinado fichero por la configuración fallará, lo cual es lógico
+    por lo que deberias apartar esas roms y aplicar otra configuracion por defecto para esas roms antes de procesar
+    esos directorios por separado
+
+
+Funcionalidades previstas-------------------------------------------------------------------------------------------------
+
++ Traducir aplicación al inglés
++ Traducir documentación al inglés
+ 
+Leyenda-------------------------------------------------------------------------------------------------------------------
+
+[+] Funcionalidad añadida
+[*] Funcionalidad cambiada
+[-] Funcionalidad retirada
+[x] Limitaciones
+[!] Bugfix o mejora
